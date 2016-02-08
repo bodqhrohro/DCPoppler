@@ -37,3 +37,11 @@ thandle* ListLoad(thandle* ParentWin, char* FileToLoad, int ShowFlags) {
 
 	return gFix;
 }
+
+void ListCloseWindow(thandle* ListWin) {
+	gtk_widget_destroy(ListWin);
+	free(surface);
+	free(canvas);
+	free(document);
+	free(currentPage);
+};
